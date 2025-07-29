@@ -28,4 +28,15 @@ public class NotificationDecorator implements Logger {
         sendAlert(message);
         wrapped.error(message);
     }
+
+    @Override
+    public void log(String level, String message) {
+        wrapped.log(level, message);
+        sendNotification(level, message);
+    }
+
+    private void sendNotification(String level, String message) {
+        // Simulate notification (could be email, push, etc.)
+        System.out.println("[Notification] " + level + ": " + message);
+    }
 }

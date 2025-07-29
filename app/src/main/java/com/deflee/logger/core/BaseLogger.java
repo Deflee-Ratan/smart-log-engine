@@ -24,5 +24,5 @@ public abstract class BaseLogger implements Logger {
         log("ERROR", message);
     }
 
-    protected abstract void log(String level, String message);
+    public abstract void log(String level, String message);
 }

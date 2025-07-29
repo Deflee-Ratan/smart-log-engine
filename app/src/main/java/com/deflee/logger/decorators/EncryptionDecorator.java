@@ -1,6 +1,7 @@
 package com.deflee.logger.decorators;
 
 import com.deflee.logger.core.Logger;
+import com.deflee.logger.utils.EncryptionUtil;
 
 public class EncryptionDecorator implements Logger {
     private final Logger wrapped;
@@ -10,7 +11,7 @@ public class EncryptionDecorator implements Logger {
     }
 
     private String encrypt(String message) {
-        return new StringBuilder(message).reverse().toString(); // Simulated encryption
+        return  EncryptionUtil.encrypt(message); // Simulated encryption
     }
 
     @Override
@@ -26,5 +27,10 @@ public class EncryptionDecorator implements Logger {
     @Override
     public void error(String message) {
         wrapped.error("[ENCRYPTED] " + encrypt(message));
+    }
+
+    @Override
+    public void log(String level, String message) {
+        wrapped.log(level, encrypt(message));
     }
 }

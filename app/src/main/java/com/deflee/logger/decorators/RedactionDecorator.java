@@ -30,4 +30,9 @@ public class RedactionDecorator implements Logger {
     public void error(String message) {
         wrapped.error(redact(message));
     }
+
+     @Override
+    public void log(String level, String message) {
+        wrapped.log(level, redact(message));
+    }
 }

@@ -29,4 +29,11 @@ public class TracingDecorator implements Logger {
     public void error(String message) {
         wrapped.error(addTraceId(message));
     }
+
+     @Override
+    public void log(String level, String message) {
+        System.out.println("[Tracing] Entering log(" + level + ")");
+        wrapped.log(level, message);
+        System.out.println("[Tracing] Exiting log(" + level + ")");
+    }
 }

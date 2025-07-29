@@ -17,4 +17,12 @@ public class LogMessage {
     public String getFormattedMessage() {
         return "[" + timestamp + "] [" + level + "] " + message;
     }
+
+    public String getLevel(){
+        return this.level;
+    }
+
+     public String getMessage(){
+        return this.message;
+    }
 }

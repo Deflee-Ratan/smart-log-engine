@@ -1,6 +1,10 @@
 package com.deflee.logger.core;
 
-public class ConsoleLogger implements Logger {
+public class ConsoleLogger extends BaseLogger {
+
+    public void log(String level, String message) {
+        System.out.println("[Console] " + formatMessage(level,message));
+    }
 
     @Override
     public void info(String message) {

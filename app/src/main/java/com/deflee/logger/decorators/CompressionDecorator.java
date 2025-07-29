@@ -27,4 +27,8 @@ public class CompressionDecorator implements Logger {
     public void error(String message) {
         wrapped.error("[COMPRESSED] " + compress(message));
     }
+    @Override
+    public void log(String level, String message) {
+        wrapped.log(level, compress(message));
+    }
 }
