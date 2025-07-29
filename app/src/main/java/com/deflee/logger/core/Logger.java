@@ -1,4 +1,4 @@
-package com.deflee.logger;
+package com.deflee.logger.core;
 
 public interface Logger {
     void info(String message);

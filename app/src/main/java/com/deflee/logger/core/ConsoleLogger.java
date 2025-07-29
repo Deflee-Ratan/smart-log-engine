@@ -1,4 +1,4 @@
-package com.deflee.logger;
+package com.deflee.logger.core;
 
 public class ConsoleLogger implements Logger {
 

@@ -1,4 +1,4 @@
-package com.deflee.logger;
+package com.deflee.logger.core;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

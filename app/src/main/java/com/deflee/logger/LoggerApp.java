@@ -1,4 +1,6 @@
 package com.deflee.logger;
+import com.deflee.logger.core.Logger;
+import com.deflee.logger.core.ConsoleLogger;
 
 public class LoggerApp {
     public static void main(String[] args) {
