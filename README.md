@@ -20,7 +20,7 @@ A real-time, extensible log processing system built in Java using the **Decorato
 
 - **Java 17+**
 - **Maven** – build and dependency management
-- **JUnit 5** – testing
+- **JUnit 4** – testing
 - **SLF4J** – base logging interface
 - **Java Cryptography Extension (JCE)** – AES encryption
 - **GZIP** – built-in Java compression
